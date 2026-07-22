@@ -1,0 +1,549 @@
+/* Temel Sıfırlamalar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f172a; /* Derin koyu mavi/gri */
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* Navigasyon Barı */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 10%;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* Logo Kapsayıcısı */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Link alt çizgisini kaldırır */
+}
+
+/* SVG Logonun Boyutu ve Efektleri */
+.bay-logo-svg {
+    height: 40px;      /* Logonun yüksekliği */
+    width: auto;        /* Genişlik otomatik ayarlanır */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Logonun üzerine gelindiğinde (Hover) */
+.logo a:hover .bay-logo-svg {
+    transform: scale(1.05); /* Hafifçe büyür */
+    filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.5)); /* Mavi parlama efekti */
+}
+
+/* Hero Bölümü */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #38bdf8;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+}
+
+/* Genel Bölüm Stilleri */
+.section {
+    padding: 6rem 10% 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #f1f5f9;
+    border-bottom: 2px solid #38bdf8;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+/* Kart Stilleri */
+.card {
+    background: #1e293b;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Yetenek Kartları */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: #1e293b;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+/* İletişim */
+.contact-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    padding: 0.6rem 1.2rem;
+    background: #334155;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.social-btn:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #64748b;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Animasyonlar */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards ease-out;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================
+   HAKKIMDA BÖLÜMÜ VE ANİMASYONLARI
+   ========================================== */
+
+/* Görsel ve Metni Yan Yana Hizalama */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+/* Görsel Kapsayıcısı ve Animasyon */
+.about-image-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    width: 280px;
+    height: 280px;
+    
+    /* Soldan sağa kayarak belirme animasyonu */
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 0.3s; /* Sayfa kaydırıldığında yumuşak giriş için */
+}
+
+/* Profil Resminin Stili */
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid rgba(56, 189, 248, 0.3);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+/* Resmin Üzerine Gelindiğinde Hafif Büyüme */
+.about-image-wrapper:hover .about-img {
+    transform: translateY(-6px) scale(1.02);
+    border-color: #38bdf8;
+}
+
+/* Resmin Arkasındaki Mavi Parlama Efekti */
+.img-glow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    border-radius: 20px;
+    filter: blur(25px);
+    opacity: 0.3;
+    z-index: 1;
+    transition: opacity 0.4s ease;
+}
+
+.about-image-wrapper:hover .img-glow {
+    opacity: 0.6;
+}
+
+/* Metin İçeriği */
+.about-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #f1f5f9;
+}
+
+.about-content p {
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+
+/* Soldan Sağa Kayma Animasyonu Tanımı */
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Mobil Ekranlar İçin Uyum (Alt alta geçiş) */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .about-image-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* ==========================================
+   YETENEKLER BÖLÜMÜ STİLLERİ
+   ========================================== */
+
+.section-subtitle {
+    color: #94a3b8;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+}
+
+.category-title {
+    color: #38bdf8;
+    font-size: 1.25rem;
+    margin: 2rem 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+/* Grid Yapısı */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Yetenek Kartı Tasarımı */
+.skill-card {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Kart Hover (Üzerine Gelme) Efekti */
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 12px 24px -10px rgba(56, 189, 248, 0.25);
+    background: rgba(30, 41, 59, 0.95);
+}
+
+/* İkon Stilleri ve Boyutu */
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.15);
+}
+
+/* Kart Başlık ve Alt Metinleri */
+.skill-card h4 {
+    color: #f8fafc;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.skill-level {
+    color: #94a3b8;
+    font-size: 0.825rem;
+    display: block;
+}
+
+/* Teknolojiye Özel İkon Renkleri */
+.skill-icon.java { color: #f89820; }
+.skill-icon.csharp { color: #9b4f96; }
+.skill-icon.c-lang { color: #659ad2; }
+.skill-icon.html { color: #e34f26; }
+.skill-icon.sql { color: #00758f; }
+.skill-icon.js { color: #f7df1e; }
+.skill-icon.git { color: #f05032; }
+.skill-icon.problem { color: #38bdf8; }
+
+/* ==========================================
+   İLETİŞİM BÖLÜMÜ VE FORM STİLLERİ
+   ========================================== */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.contact-form-card h3,
+.info-card h3 {
+    color: #f1f5f9;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Form Elemanları */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    color: #f8fafc;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.submit-btn {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Sosyal Medya Izgarası (Grid) */
+.info-text {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1rem;
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: #f8fafc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.social-card i {
+    font-size: 1.3rem;
+}
+
+/* Özel Sosyal Medya Hover Renkleri */
+.social-card.github:hover {
+    border-color: #f0f6fc;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.social-card.linkedin:hover {
+    border-color: #0a66c2;
+    color: #0a66c2;
+    box-shadow: 0 4px 12px rgba(10, 102, 194, 0.2);
+    transform: translateY(-3px);
+}
+
+.social-card.x-twitter:hover {
+    border-color: #e7e9ea;
+    color: #f8fafc;
+    background: #000;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+}
+
+.social-card.instagram:hover {
+    border-color: #e1306c;
+    color: #e1306c;
+    box-shadow: 0 4px 12px rgba(225, 48, 108, 0.25);
+    transform: translateY(-3px);
+}
+
+/* Doğrudan E-posta Alanı */
+.direct-email {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.direct-email i {
+    color: #38bdf8;
+}
+
+.direct-email a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.direct-email a:hover {
+    text-decoration: underline;
+}
+
+/* Mobil Ekran Uyumları */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
