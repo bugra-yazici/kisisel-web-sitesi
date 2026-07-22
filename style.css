@@ -547,3 +547,85 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================
+   MOBİL CİHAZ UYUMU (RESPONSIVE DESIGN)
+   ========================================== */
+
+/* Ekran genişliği 768px ve altı olan cihazlar (Telefonlar ve Tabletler) */
+@media (max-width: 768px) {
+
+    /* 1. Navigasyon Menüsü */
+    .navbar {
+        padding: 0.8rem 5%; /* Kenar boşluklarını daraltıyoruz */
+    }
+
+    .nav-links {
+        gap: 1rem; /* Menü linkleri arasındaki mesafeyi kısaltıyoruz */
+    }
+
+    .nav-links a {
+        font-size: 0.85rem; /* Yazı boyutunu mobilleştiriyoruz */
+    }
+
+    /* 2. Ana Karşılama (Hero) */
+    .hero h1 {
+        font-size: 2rem; /* Başlığı telefonda taşmayacak boyuta getiriyoruz */
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* 3. Genel Bölüm Alanları */
+    .section {
+        padding: 4rem 5% 2rem; /* Yan boşlukları mobilde daraltıyoruz */
+    }
+
+    /* 4. Hakkımda Bölümü */
+    .about-container {
+        flex-direction: column; /* Görsel ve metni alt alta dizer */
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .about-image-wrapper {
+        width: 180px; /* Görseli telefona göre biraz küçültüyoruz */
+        height: 180px;
+    }
+
+    /* 5. Yetenekler Izgarası */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* Kartlar dar ekrana sığar */
+        gap: 0.8rem;
+    }
+
+    .skill-card {
+        padding: 1rem 0.8rem;
+    }
+
+    .skill-icon {
+        font-size: 2rem;
+    }
+
+    /* 6. İletişim Formu ve Sosyal Medya */
+    .contact-container {
+        grid-template-columns: 1fr; /* Form ve sosyal butonları alt alta getirir */
+        gap: 1.5rem;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr 1fr; /* Butonlar 2'li düzen halinde kalır */
+    }
+}
+
+/* Çok Küçük Ekranlı Telefonlar İçin (380px ve altı) */
+@media (max-width: 380px) {
+    .social-grid {
+        grid-template-columns: 1fr; /* Sosyal medya butonlarını tek sıraya düşürür */
+    }
+    
+    .nav-links {
+        gap: 0.6rem;
+    }
+}
