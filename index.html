@@ -3,43 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAY</title>
-    <!-- Koyu Mavi & Parlak Mavi 'BAY' Favicon -->
+    <title>BAY | Kişisel Portfolyo</title>
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230f172a'/><path d='M20 20 L80 20 L80 80 L20 80 Z' fill='none'/><text x='50' y='64' font-family='Arial, sans-serif' font-weight='800' font-size='42' fill='%2338bdf8' text-anchor='middle'>BAY</text><circle cx='80' cy='20' r='6' fill='%2338bdf8'/></svg>">
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome İkon Kütüphanesi -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome İkonları -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <!-- Navigasyon Menüsü -->
     <nav class="navbar">
         <div class="logo">
-    <a href="#home">
-        <!-- Modern "BAY" SVG Logosu -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 40" class="bay-logo-svg">
-            <!-- Arka Plan Yuvarlak Efekti (İsteğe Bağlı, daha sade olsun derseniz silinebilir) -->
-            <circle cx="20" cy="20" r="18" fill="rgba(56, 189, 248, 0.1)"/>
-            
-            <!-- "BAY" Yazısı - Modern Sans-Serif Font Simülasyonu -->
-            <text x="45" y="27" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="#38bdf8" text-anchor="middle">BAY</text>
-            
-            <!-- Altındaki Küçük Dekoratif Çizgi -->
-            <rect x="30" y="33" width="30" height="2" rx="1" fill="#f8fafc"/>
-        </svg>
-        </a>
-    </div>
+            <a href="#home">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 40" class="bay-logo-svg">
+                    <circle cx="20" cy="20" r="18" fill="rgba(56, 189, 248, 0.1)"/>
+                    <text x="45" y="27" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="#38bdf8" text-anchor="middle">BAY</text>
+                    <rect x="30" y="33" width="30" height="2" rx="1" fill="#f8fafc"/>
+                </svg>
+            </a>
+        </div>
         <ul class="nav-links">
             <li><a href="#home">Ana Sayfa</a></li>
             <li><a href="#about">Hakkımda</a></li>
             <li><a href="#skills">Yetenekler</a></li>
+            <li><a href="#projects">Projeler</a></li>
             <li><a href="#contact">İletişim</a></li>
         </ul>
     </nav>
 
-    <!-- Ana Karşılama Bölümü (Hero) -->
+    <!-- Hero Bölümü -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="fade-in">Merhaba, Ben <span class="highlight">Buğra</span></h1>
@@ -48,169 +43,248 @@
         </div>
     </section>
 
-    <!-- Hakkımda Bölümü (Görsel + Yazı Düzeni) -->
-<section id="about" class="section">
-    <h2 class="section-title">Hakkımda</h2>
+    <!-- Hakkımda Bölümü (Profil resmi yolu düzeltildi) -->
+    <section id="about" class="section">
+        <h2 class="section-title">Hakkımda</h2>
+        <div class="about-container">
+            <div class="about-image-wrapper">
+                <img src="resimler/vesikalık.jpeg"Buğra Arda Yazıcı Profil Resmi" class="about-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop'">
+                <div class="img-glow"></div>
+            </div>
+            <div class="card about-content">
+                <h3>Merhaba! Ben <span class="highlight">Buğra</span></h3>
+                <p>
+                    Yazılım ve teknoloji dünyasına büyük bir tutkuyla bağlıyım. 
+                    Modern web teknolojileri, veritabanı yönetimi ve yazılım geliştirme süreçlerinde 
+                    kendimi sürekli geliştiriyor; sade, hızlı ve kullanıcı dostu projeler üretiyorum.
+                </p>
+                <p>
+                    Problemlere pratik çözümler üretmeyi, yeni teknolojiler keşfetmeyi ve 
+                    sürekli öğrenmeyi bir yaşam tarzı olarak benimsedim.
+                </p>
+            </div>
+        </div>
+    </section>
     
-    <div class="about-container">
-        <!-- Sol Taraf: Animasyonlu Görsel -->
-        <div class="about-image-wrapper">
-            <img src="resimler/normal.jpeg" alt="Profil Resmi" class="about-img">
-            <div class="img-glow"></div> <!-- Arka plandaki şık parlama efekti -->
+    <!-- Yetenekler Bölümü -->
+    <section id="skills" class="section">
+        <h2 class="section-title">Yetenekler & Teknolojiler</h2>
+        <p class="section-subtitle">Geliştirme süreçlerinde aktif olarak kullandığım dil, araç ve teknolojiler:</p>
+
+        <h3 class="category-title"><i class="fa-solid fa-code"></i> Programlama Dilleri</h3>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fa-brands fa-java skill-icon java"></i>
+                <h4>Java</h4>
+                <span class="skill-level">Nesne Yönelimli Programlama</span>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-code skill-icon csharp"></i>
+                <h4>C#</h4>
+                <span class="skill-level">.NET & Masaüstü Uygulamaları</span>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-c skill-icon c-lang"></i>
+                <h4>C</h4>
+                <span class="skill-level">Temel Algoritma & Yapılar</span>
+            </div>
         </div>
 
-        <!-- Sağ Taraf: Metin Kartı -->
-        <div class="card about-content">
-            <h3>Merhaba! Ben <span class="highlight">Buğra</span></h3>
-            <p>
-                Yazılım ve teknoloji dünyasına büyük bir tutkuyla bağlıyım. 
-                Modern web teknolojileri, veritabanı yönetimi ve yazılım geliştirme süreçlerinde 
-                kendimi sürekli geliştiriyor; sade, hızlı ve kullanıcı dostu projeler üretiyorum.
-            </p>
-            <p>
-                Problemlere pratik çözümler üretmeyi, yeni teknolojiler keşfetmeyi ve 
-                sürekli öğrenmeyi bir yaşam tarzı olarak benimsedim.
-            </p>
+        <h3 class="category-title"><i class="fa-solid fa-layer-group"></i> Web & Veritabanı</h3>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fa-brands fa-html5 skill-icon html"></i>
+                <h4>HTML5 & CSS3</h4>
+                <span class="skill-level">Modern & Responsive Arayüz</span>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-database skill-icon sql"></i>
+                <h4>SQL & Veritabanı</h4>
+                <span class="skill-level">Veri Modelleme & Sorgulama</span>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-js skill-icon js"></i>
+                <h4>JavaScript</h4>
+                <span class="skill-level">Dinamik Web Fonksiyonları</span>
+            </div>
         </div>
-    </div>
-</section>
 
-    
-<!-- Yetenekler & Uzmanlıklar Bölümü -->
-<section id="skills" class="section">
-    <h2 class="section-title">Yetenekler & Teknolojiler</h2>
-    <p class="section-subtitle">Geliştirme süreçlerinde aktif olarak kullandığım dil, araç ve teknolojiler:</p>
+        <h3 class="category-title"><i class="fa-solid fa-screwdriver-wrench"></i> Araçlar & Yetkinlikler</h3>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fa-brands fa-git-alt skill-icon git"></i>
+                <h4>Git & GitHub</h4>
+                <span class="skill-level">Versiyon Kontrolü</span>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-lightbulb skill-icon problem"></i>
+                <h4>Problem Çözme</h4>
+                <span class="skill-level">Analitik Düşünme & Mantık</span>
+            </div>
+        </div>
+    </section>
 
-    <!-- Kategori 1: Programlama Dilleri -->
-    <h3 class="category-title"><i class="fa-solid fa-code"></i> Programlama Dilleri</h3>
-    <div class="skills-grid">
-        <div class="skill-card">
-            <i class="fa-brands fa-java skill-icon java"></i>
-            <h4>Java</h4>
-            <span class="skill-level">Nesne Yönelimli Programlama</span>
+    <!-- Projeler Bölümü -->
+    <section id="projects" class="section">
+        <div class="projects-section-header">
+            <span class="project-number">03</span>
+            <h2 class="section-title">Projeler</h2>
         </div>
-        <div class="skill-card">
-            <i class="fa-solid fa-code skill-icon csharp"></i>
-            <h4>C#</h4>
-            <span class="skill-level">.NET & Masaüstü Uygulamaları</span>
-        </div>
-        <div class="skill-card">
-            <i class="fa-solid fa-c skill-icon c-lang"></i>
-            <h4>C</h4>
-            <span class="skill-level">Temel Algoritma & Yapılar</span>
-        </div>
-    </div>
+        <p class="section-subtitle">Geliştirdiğim masaüstü ve web tabanlı öne çıkan projelerim:</p>
 
-    <!-- Kategori 2: Web & Veritabanı -->
-    <h3 class="category-title"><i class="fa-solid fa-layer-group"></i> Web & Veritabanı</h3>
-    <div class="skills-grid">
-        <div class="skill-card">
-            <i class="fa-brands fa-html5 skill-icon html"></i>
-            <h4>HTML5 & CSS3</h4>
-            <span class="skill-level">Modern & Responsive Arayüz</span>
-        </div>
-        <div class="skill-card">
-            <i class="fa-solid fa-database skill-icon sql"></i>
-            <h4>SQL & Veritabanı</h4>
-            <span class="skill-level">Veri Modelleme & Sorgulama</span>
-        </div>
-        <div class="skill-card">
-            <i class="fa-brands fa-js skill-icon js"></i>
-            <h4>JavaScript</h4>
-            <span class="skill-level">Dinamik Web Fonksiyonları</span>
-        </div>
-    </div>
-
-    <!-- Kategori 3: Araçlar & Yetkinlikler -->
-    <h3 class="category-title"><i class="fa-solid fa-screwdriver-wrench"></i> Araçlar & Yetkinlikler</h3>
-    <div class="skills-grid">
-        <div class="skill-card">
-            <i class="fa-brands fa-git-alt skill-icon git"></i>
-            <h4>Git & GitHub</h4>
-            <span class="skill-level">Versiyon Kontrolü</span>
-        </div>
-        <div class="skill-card">
-            <i class="fa-solid fa-lightbulb skill-icon problem"></i>
-            <h4>Problem Çözme</h4>
-            <span class="skill-level">Analitik Düşünme & Mantık</span>
-        </div>
-    </div>
-</section>
-
-<!-- İletişim Bölümü -->
-<section id="contact" class="section">
-    <h2 class="section-title">İletişim</h2>
-    <p class="section-subtitle">Proje fikirleriniz, sorularınız veya sadece tanışmak için bana ulaşabilirsiniz:</p>
-
-    <div class="contact-container">
-        <!-- Sol Taraf: İletişim Formu -->
-        <div class="card contact-form-card">
-            <h3>Mesaj Gönder</h3>
-            <form id="contactForm" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Adınız Soyadınız</label>
-                    <input type="text" id="name" name="name" placeholder="Örn: Ahmet Yılmaz" required>
+        <div class="projects-grid">
+            
+            <!-- Proje 1: REPNEX -->
+            <div class="card project-card" data-images='["resimler/repnex1.png", "resimler/repnex2.png", "resimler/repnex3.png", "resimler/repnex4.png", "resimler/repnex5.png", "resimler/repnex6.png", "resimler/repnex8.png"]' data-link="https://github.com/bugra-yazici">
+                <div class="project-img-container">
+                    <img src="resimler/repnex1.png" alt="REPNEX Projesi" class="project-img">
+                    <div class="img-overlay-hint"><i class="fa-solid fa-expand"></i> Ekranı Büyüt & Slaytı Başlat</div>
                 </div>
-
-                <div class="form-group">
-                    <label for="email">E-posta Adresiniz</label>
-                    <input type="email" id="email" name="email" placeholder="Örn: ahmet@example.com" required>
+                <div class="project-info">
+                    <h3>REPNEX Fitness Portal</h3>
+                    <p>Haftalık mikro-döngü performans takibi, progressive overload ve RPE analizleri sunan modern web uygulaması.</p>
+                    <div class="project-tags">
+                        <span>ASP.NET Core</span>
+                        <span>SQL Server</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-action-row">
+                        <button class="project-expand-btn">Projeyi İncele <i class="fa-solid fa-expand"></i></button>
+                        <a href="https://github.com/bugra-yazici" target="_blank" class="github-icon-link" title="GitHub Kodları"><i class="fa-brands fa-github"></i></a>
+                    </div>
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <label for="message">Mesajınız</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Mesajınızı buraya yazabilirsiniz..." required></textarea>
+            <!-- Proje 2 -->
+            <div class="card project-card" data-images='["resimler/WhatsApp Image 2026-09-10 at 01.10.54.jpeg", "resimler/WhatsApp Image 2026-09-09 at 02.27.53.jpeg"]' data-link="https://github.com/bugra-yazici">
+                <div class="project-img-container">
+                    <img src="resimler/WhatsApp Image 2026-09-10 at 01.10.54.jpeg" alt="Hava Durumu Panosu" class="project-img">
+                    <div class="img-overlay-hint"><i class="fa-solid fa-expand"></i> Ekranı Büyüt & Slaytı Başlat</div>
                 </div>
+                <div class="project-info">
+                    <h3>Hava Durumu Panosu</h3>
+                    <p>Konuma göre anlık hava verilerini API üzerinden çeken, animasyonlu ve duyarlı bir panel.</p>
+                    <div class="project-tags">
+                        <span>API</span>
+                        <span>Fetch</span>
+                        <span>UI</span>
+                    </div>
+                    <div class="project-action-row">
+                        <button class="project-expand-btn">Projeyi İncele <i class="fa-solid fa-expand"></i></button>
+                        <a href="https://github.com/bugra-yazici" target="_blank" class="github-icon-link" title="GitHub Kodları"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
 
-                <button type="submit" class="btn submit-btn">
-                    <i class="fa-solid fa-paper-plane"></i> Gönder
-                </button>
-            </form>
+            <!-- Proje 3 -->
+            <div class="card project-card" data-images='["resimler/WhatsApp Image 2026-09-10 at 01.10.54.jpeg", "resimler/WhatsApp Image 2026-09-09 at 02.27.53.jpeg"]' data-link="https://github.com/bugra-yazici">
+                <div class="project-img-container">
+                    <img src="resimler/WhatsApp Image 2026-09-10 at 01.10.54.jpeg" alt="Öğrenci Not Sistemi" class="project-img">
+                    <div class="img-overlay-hint"><i class="fa-solid fa-expand"></i> Ekranı Büyüt & Slaytı Başlat</div>
+                </div>
+                <div class="project-info">
+                    <h3>Öğrenci Not Sistemi</h3>
+                    <p>Ders ve not girişi yapılabilen, ortalama hesaplayan bir okul yönetim arayüzü.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>CRUD</span>
+                    </div>
+                    <div class="project-action-row">
+                        <button class="project-expand-btn">Projeyi İncele <i class="fa-solid fa-expand"></i></button>
+                        <a href="https://github.com/bugra-yazici" target="_blank" class="github-icon-link" title="GitHub Kodları"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </section>
 
-        <!-- Sağ Taraf: Sosyal Medya & İletişim Bilgileri -->
-        <div class="contact-info">
-            <div class="card info-card">
-                <h3>Bana Ulaşın</h3>
-                <p class="info-text">Aktif olarak kullandığım sosyal medya hesaplarım ve iletişim kanallarım aşağıdadır:</p>
+    <!-- İletişim Bölümü -->
+    <section id="contact" class="section">
+        <h2 class="section-title">İletişim</h2>
+        <p class="section-subtitle">Proje fikirleriniz, sorularınız veya sadece tanışmak için bana ulaşabilirsiniz:</p>
 
-                <div class="social-grid">
-                    <!-- GitHub -->
-                    <a href="https://github.com/bugra-yazici" target="_blank" class="social-card github">
-                        <i class="fa-brands fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
+        <div class="contact-container">
+            <div class="card contact-form-card">
+                <h3>Mesaj Gönder</h3>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Adınız Soyadınız</label>
+                        <input type="text" id="name" name="name" placeholder="Örn: Ahmet Yılmaz" required>
+                    </div>
 
-                    <!-- LinkedIn -->
-                    <a href="https://www.linkedin.com/in/bu%C4%9Fra-arda-yaz%C4%B1c%C4%B1-11a22438b/" target="_blank" class="social-card linkedin">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
+                    <div class="form-group">
+                        <label for="email">E-posta Adresiniz</label>
+                        <input type="email" id="email" name="email" placeholder="Örn: ahmet@example.com" required>
+                    </div>
 
-                    <!-- X (Twitter) -->
-                    <a href="https://x.com/arda_bugr" target="_blank" class="social-card x-twitter">
-                        <i class="fa-brands fa-x-twitter"></i>
-                        <span>X (Twitter)</span>
-                    </a>
+                    <div class="form-group">
+                        <label for="message">Mesajınız</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Mesajınızı buraya yazabilirsiniz..." required></textarea>
+                    </div>
 
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/bugra.yzc0?igsh=MWNkaXMzamJxbTYwcw==" target="_blank" class="social-card instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                        <span>Instagram</span>
-                    </a>
+                    <button type="submit" class="btn submit-btn">
+                        <i class="fa-solid fa-paper-plane"></i> Gönder
+                    </button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div class="card info-card">
+                    <h3>Bana Ulaşın</h3>
+                    <p class="info-text">Aktif olarak kullandığım sosyal medya hesaplarım ve iletişim kanallarım aşağıdadır:</p>
+
+                    <div class="social-grid">
+                        <a href="https://github.com/bugra-yazici" target="_blank" class="social-card github">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/bu%C4%9Fra-arda-yaz%C4%B1c%C4%B1-11a22438b/" target="_blank" class="social-card linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://x.com/arda_bugr" target="_blank" class="social-card x-twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <span>X (Twitter)</span>
+                        </a>
+                        <a href="https://www.instagram.com/bugra.yzc0?igsh=MWNkaXMzamJxbTYwcw==" target="_blank" class="social-card instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+
+                    <div class="direct-email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>E-posta:</span>
+                        <a href="mailto:ornek@email.com">ornek@email.com</a>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="direct-email">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>E-posta:</span>
-                    <a href="mailto:ornek@email.com">ornek@email.com</a>
+    <!-- PROJE DEV EKRAN SLAYT MODALI -->
+    <div id="projectModal" class="project-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-card-wrapper">
+            <span class="close-project-modal">&times;</span>
+            <div class="modal-slider-container">
+                <img id="modalSliderImg" src="" alt="Proje Slayt Görseli">
+                <div class="slider-indicators" id="sliderIndicators"></div>
+            </div>
+            <div class="modal-details">
+                <h2 id="modalTitle">Proje Başlığı</h2>
+                <p id="modalDesc">Proje açıklaması buraya gelecek...</p>
+                <div class="modal-tags" id="modalTags"></div>
+                <div class="modal-links">
+                    <a id="modalExternalBtn" href="#" target="_blank" class="btn"><i class="fa-brands fa-github"></i> GitHub'da İncele</a>
                 </div>
             </div>
         </div>
     </div>
-</section>
 
-    <!-- Alt Bilgi (Footer) -->
+    <!-- Alt Bilgi -->
     <footer>
         <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
     </footer>
